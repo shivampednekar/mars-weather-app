@@ -1,0 +1,145 @@
+.previous-weather {
+  background: var(--primary-light);
+  color: var(--rock-gray);
+  padding-bottom: 3em;
+  // display: none;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(60%);
+  transition: transform 350ms ease;
+
+  .title {
+    color: orangered;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 3rem 4rem;
+  }
+}
+
+.show-previous-weather {
+  width: 10rem;
+  background: var(--primary-light);
+  color: var(--rock-gray);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 0rem));
+  border: 0;
+  text-align: center;
+  font-family: inherit;
+  font-size: 2.25rem;
+  line-height: 1;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--primary);
+    transition: 0.3s ease-in-out;
+  }
+
+  span {
+    display: block;
+    transform: rotate(0);
+    transition: transform 300ms ease;
+  }
+}
+
+.show-weather.previous-weather {
+  transform: translateY(0);
+
+  .show-previous-weather span {
+    display: block;
+    transform: rotate(180deg) translateY(-6px);
+  }
+
+  .previous-weather-title,
+  .previous-day {
+    animation: slideUpIn 750ms forwards;
+  }
+
+  .previous-weather-title {
+    text-align: start;
+  }
+}
+
+.previous-days {
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.7;
+
+  .first {
+    // padding-left: 5rem;
+  }
+}
+
+.previous-day {
+  opacity: 0;
+  // transition: opacity 350ms linear;
+
+  & > * {
+    margin: 0;
+  }
+
+  h4 {
+    color: var(--primary);
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+
+  button {
+    background: rosybrown;
+    color: whitesmoke;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 100vmax;
+    padding: 0.3em 1em;
+    margin-top: 1em;
+    cursor: pointer;
+
+    &:hover {
+    }
+  }
+}
+
+.previous-weather-title {
+  text-align: center;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+
+// .show-weather {
+//   .previous-weather {
+//     transform: translateY(0);
+//   }
+// }
+
+@media (max-width: 900px) {
+  .previous-weather {
+    bottom: -30%;
+
+    .title {
+      margin: 5rem 4rem 0rem;
+    }
+  }
+
+  .show-weather.previous-weather {
+    .previous-weather-title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .previous-days {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 1em;
+  }
+
+  .previous-day:last-child {
+    margin-top: 1.5em;
+    grid-column: 1 / 3;
+  }
+}

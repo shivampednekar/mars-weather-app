@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables';
+
+// 2. Base stuff
+@import './base/base', './base/reset', './base/typography', './base/animations';
+
+// 3. Components
+@import 'components/button', './components//toogle';
+
+// 4. Page-specific styles
+@import 'pages/home', './pages/bottomSection';

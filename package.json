@@ -1,0 +1,16 @@
+{
+  "name": "mars_weather_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "sass --watch sass/index.scss css/styles.css"
+  },
+  "author": "Shivam Pednekar",
+  "license": "ISC"
+}
