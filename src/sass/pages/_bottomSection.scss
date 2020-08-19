@@ -2,7 +2,6 @@
   background: var(--primary-light);
   color: var(--rock-gray);
   padding-bottom: 3em;
-  // display: none;
 
   position: absolute;
   bottom: 0;
@@ -76,7 +75,6 @@
 
 .previous-day {
   opacity: 0;
-  // transition: opacity 350ms linear;
 
   & > * {
     margin: 0;
@@ -97,9 +95,6 @@
     padding: 0.3em 1em;
     margin-top: 1em;
     cursor: pointer;
-
-    &:hover {
-    }
   }
 }
 
@@ -108,12 +103,6 @@
   font-weight: 400;
   padding-top: 2rem;
 }
-
-// .show-weather {
-//   .previous-weather {
-//     transform: translateY(0);
-//   }
-// }
 
 @media (max-width: 900px) {
   .previous-weather {
